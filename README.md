@@ -9,7 +9,7 @@ Main functionalities:
     - tracking of training perfomance with `mlflow`
   - Model administration & tracking (backend):
     - model registration with `mlflow`
-    - csv logging of performance on new, unseen data
+    - csv logging of model performance on new, unseen data
     - supervision of and automated switch between two competing models ("champion" vs "challenger")
   - Frontend:
     - image upload and inferrence (pneumonia indication)
