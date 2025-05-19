@@ -73,11 +73,11 @@ def load_model_from_registry(model_name, alias):
     """
 
     # start_loading = time.time()
-    print("start loading model")
+    print("Start loading model")
     model = mlflow.pyfunc.load_model(model_uri=f"models:/{model_name}@{alias}")
     # end_loading = time.time()
     # print("loading time: ", end_loading - start_loading)
-    print("model loaded")
+    print(f"Model {model_name}@{alias} loaded")
     # extract signature
     signature = model.metadata.signature
     input_shape = signature.inputs.to_dict()[0]['tensor-spec']['shape'] 
@@ -290,7 +290,6 @@ def predict_log_switch(selected_image_paths):
         models.append(model)
         input_shapes.append(input_shape)
         input_types.append(input_type)
-        print(f"Model with alias {alias} loaded.")
         
     for i, image_file in enumerate(selected_image_paths):
         

@@ -19,7 +19,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY api/api_client.py ./api/api_client.py
 COPY api/api_helpers.py ./api/api_helpers.py
 COPY api/api_server.py ./api/api_server.py
-COPY data/test .data/test
+COPY data/test ./data/test
 COPY data/helpers.py ./data/helpers.py
 COPY unified_experiment/mlartifacts ./unified_experiment/mlartifacts
 COPY unified_experiment/mlruns ./unified_experiment/mlruns

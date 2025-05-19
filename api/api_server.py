@@ -1,6 +1,7 @@
 import uvicorn
 import numpy as np
 from fastapi import FastAPI, UploadFile, File, Form, Query, Response
+from fastapi.responses import JSONResponse
 from enum import Enum
 import mlflow
 import api_helpers as ah
@@ -145,6 +146,8 @@ async def upload_image_with_label(
     return y_pred_as_str
 
 
+' ############################### model bulk serving/prediction endpoint ###############################'
+
 # endpoint for analysing more images
 @app.post("/predict_several_images")
 async def predict_several_images( 
@@ -170,7 +173,9 @@ async def predict_several_images(
     # peform classification + logging + model switch when needed
     ah.predict_log_switch(selected_image_paths)
        
-    return "All predictions done."
+    # return "All predictions done."
+    return JSONResponse(content={"message": "All predictions done."})
+
 
 ' ############################### frontend-suitable model serving/prediction endpoint ###############################'
 # endpoint for uploading image
