@@ -56,15 +56,15 @@ Main functionalities:
 
 - Create venv and install the required python packages (`pip install -r requirements.txt`).
 
-- Build docker image from local repo (project directory), by running the following command from the project directory:
+- Build docker image from local repo (project directory) by running the following command from the project directory:
    - docker build -f virtualization/Dockerfile.fullstack -t xray_pneumonia .
 
 
-- Then build and run docker container, by running the following command from project directory:
+- Then build and run docker container by running the following command from the project directory:
    - docker run -d --name xray_container -p 8000:8000 -p 8080:8080 -p 3000:3000 xray_pneumonia
 
 - To access the GUI, open your browser and navigate to http://localhost:3000.
 
-- Alternatively, one can also run the app without the frontend by running the `run_app.sh` bash script from the project directory and use your browse to navigate to:
+- Alternatively, one can also run the app without the frontend by running the `run_app.sh` bash script from the project directory and use your browser to navigate to:
   - http://127.0.0.1:8000/docs to access the `FastAPI` GUI
   - http://127.0.0.1:8080 to access the `mlflow` GUI
