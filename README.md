@@ -51,18 +51,18 @@ Main functionalities:
 </p>
 
 - Locally prepare Git:
-   - Initialize empty git repository in a local folder (git init)
+   - Initialize empty git repository in a local folder (`git init`)
    - Specify this Github repository here as the remote origin
-   - Pull content of this repo to your local one (git pull origin main)
+   - Pull content of this repo to your local one (`git pull origin main`)
 
 - Create venv and install the required python packages (`pip install -r requirements.txt`).
 
 - Build docker image from local repo (project directory) by running the following command from the project directory:
-   - docker build -f virtualization/Dockerfile.fullstack -t xray_pneumonia .
+   - `docker build -f virtualization/Dockerfile.fullstack -t xray_pneumonia .`
 
 
 - Then build and run docker container by running the following command from the project directory:
-   - docker run -d --name xray_container -p 8000:8000 -p 8080:8080 -p 3000:3000 xray_pneumonia
+   - `docker run -d --name xray_container -p 8000:8000 -p 8080:8080 -p 3000:3000 xray_pneumonia`
 
 - To access the GUI, open your browser and navigate to http://localhost:3000.
 
