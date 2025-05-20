@@ -42,6 +42,7 @@ Main functionalities:
   <strong> Workflow documentation</strong>  
 </p>
 
+![xray-workflow](https://github.com/user-attachments/assets/8a4cf057-de78-48f2-8800-4277a0eb8bf0)
 
 
 <p align="left">
