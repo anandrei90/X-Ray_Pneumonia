@@ -58,7 +58,7 @@ Main functionalities:
 - Create venv and install the required python packages (`pip install -r requirements.txt`).
 
 - Build docker image from local repo (project directory) by running the following command from the project directory:
-   - `docker build -f virtualization/Dockerfile.fullstack -t xray_pneumonia .`
+   - `docker build -f docker/Dockerfile.fullstack -t xray_pneumonia .`
 
 
 - Then build and run docker container by running the following command from the project directory:
